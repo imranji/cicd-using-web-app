@@ -81,7 +81,7 @@ stages:
               - task: AzureRmWebAppDeployment@4
                 inputs:
                   ConnectionType: 'AzureRM'
-                  azureSubscription: 'Personal-Az-Sp'
+                  azureSubscription: 'Personal-Az-Acc'
                   appType: 'webApp'
                   WebAppName: 'learning-app-01'
                   packageForLinux: '$(Pipeline.Workspace)/**/*.zip'
@@ -104,9 +104,9 @@ stages:
               - task: AzureRmWebAppDeployment@4
                 inputs:
                   ConnectionType: 'AzureRM'
-                  azureSubscription: 'Personal-Az-Sp'
+                  azureSubscription: 'Personal-Az-Acc'
                   appType: 'webApp'
                   WebAppName: 'learning-app-01'
                   packageForLinux: '$(Pipeline.Workspace)/**/*.zip'
                   enableCustomDeployment: true
-                  DeploymentType: 'webDeploy'    
+                  DeploymentType: 'webDeploy'
